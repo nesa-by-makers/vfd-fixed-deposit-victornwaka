@@ -1,0 +1,125 @@
+body 	{width: 100% ; 
+		background-color:rgb(82, 86, 89)
+	  }
+.platform{width: 58%;
+		background-color:white;
+		margin:70px 40px 20px 250px;
+		
+	
+		}
+header{color: white;
+		background-color:#25215f;
+		height: 100px;
+		width: 100%;
+		text-align: right;
+		margin:0 auto;
+		font-family:Tahoma;
+		font-size: 20px;
+}
+#headerr{position : absolute;
+		left: 630px;
+		top: 120px
+		}
+.body1 {width :90%;
+margin:0 auto;	
+}
+
+body2{width:100%;
+margin :0 auto}
+
+#headerrr{position : absolute;
+		top: 100px}
+img {float:left}
+p{font-family: roboto;
+text-align: center;
+font-size: 13px;
+color:#25215f
+}
+h4 {color: white;
+	background-color:#25215f;
+	height: 10px;
+	width: 270px;
+	padding: 10px 10px 10px 40px;
+	
+	text-align: left;
+	
+	
+}
+
+	
+	
+#fullname {position: absolute;
+			top : 245px;
+			left :430px;
+			}
+#phonenumber {position: absolute;
+			top : 283px;
+			left :430px;
+			}
+#RAddress {position: absolute;
+			top : 320px;
+			left :430px;
+			}
+#OAddress {position: absolute;
+			top : 390px;
+			left :430px;
+			}
+#Occupation{position: absolute;
+			top : 445px;
+			left :430px;
+			}	
+#ProposedDuration{position: absolute;
+			top : 583px;
+			left :430px;
+			}
+#Amount{position: absolute;
+			top : 618px;
+			left :430px;
+			}
+#Accountnumber{position: absolute;
+			top : 747px;
+			left :430px;
+			}	
+#Accountname{position: absolute;
+			top : 782px;
+			left :430px;
+			}
+#NameOfBank	{position: absolute;
+			top : 820px;
+			left :430px;
+			}
+#Name		{position: absolute;
+			top : 945px;
+			left :430px;
+			}
+#PhoneNumber2	{position: absolute;
+			top : 980px;
+			left :430px;
+			}
+#Address2		{position: absolute;
+			top : 1014px;
+			left :430px;
+			}
+#Reference	{position: absolute;
+			top : 1054px;
+			left :530px;
+			}
+#reference2	{font-size: 12px;
+			position:absolute;
+			left: 360px;
+			top: 1057px
+			}
+#Signature	{position: absolute;
+			top: 1100px;
+			left: 500px}
+#Date	{position: absolute;
+			top: 1105px;
+			left:783px}
+#reduce{font-size: 14px;
+		position: absolute;
+		top:1110px;
+		left: 440px}
+#reduce2{font-size: 14px;
+		position: absolute;
+		top:1110px;
+		left: 750px}
