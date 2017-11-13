@@ -1,0 +1,230 @@
+<html>
+    <head>
+        <title>
+            WELCOME!!!
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="jquery-3.2.1.min.js"></script>
+        
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+  @import url(font-awesome.min.css);
+        img{float: right;border-radius: 11px;
+        }
+        body{background-color: rgb(250, 210, 124);border: #25215f 2px  solid;font-family: "Lato", sans-serif;}
+       
+        .loginn{border-radius: 11px;background-color: white;font-family: 'Gloria Hallelujah', 'cursive';color:#25215f;width:60%;height:80%;margin-left:10%;margin-top:1%; border: #25215f 3px  solid;  box-shadow: 6px 6px  rgb(72, 81, 128)
+                }
+        .registerr{border-radius: 11px;background-color: #25215f;font-family: 'Gloria Hallelujah', 'cursive'; color:white;width:60%;height:80%;margin-left:10%;margin-top:1%; border: white 3px  solid;box-shadow: 6px 6px  rgb(214, 214, 214)}
+        .writeup{text-align: center; font-size: 15px}
+        .registerr input{background-color: rgb(57, 88, 99);border-radius: 5px;}
+        .registerr select{background-color: rgb(57, 88, 99);border-radius: 5px;}
+        .loginn select,input{background-color: rgb(193, 210, 216);border-radius: 5px; }
+        #Lsubmit{color:white;background-color: #25215f; box-shadow: 2px 2px  #25215f; border-radius: 5px}
+        #Rsubmit{color:#25215f; box-shadow: 1px 1px  rgb(206, 211, 236);border-radius: 5px}
+        h3{float: right;font-family: 'Gloria Hallelujah', 'cursive'}
+        .loginn span{color:#ffffff;float: right;font-family: 'Gloria Hallelujah', 'cursive';}
+
+        input{size: 70%;font-family: 'Gloria Hallelujah', 'cursive'}
+        .myrow{background-color: #25215f}
+
+.stripped {
+  padding: 2em 1em;
+  background-image: -webkit-repeating-linear-gradient(135deg, rgba(0,0,0,.3), rgba(0,0,0,.3) 1px, transparent 2px, transparent 2px, rgba(0,0,0,.3) 3px);
+  background-image: -moz-repeating-linear-gradient(135deg, rgba(0,0,0,.3), rgba(0,0,0,.3) 1px, transparent 2px, transparent 2px, rgba(0,0,0,.3) 3px);
+  background-image: -o-repeating-linear-gradient(135deg, rgba(0,0,0,.3), rgba(0,0,0,.3) 1px, transparent 2px, transparent 2px, rgba(0,0,0,.3) 3px);
+  background-image: repeating-linear-gradient(135deg, rgba(0,0,0,.3), rgba(0,0,0,.3) 1px, transparent 2px, transparent 2px, rgba(0,0,0,.3) 3px);
+  -webkit-background-size: 4px 4px;
+  -moz-background-size: 4px 4px;
+  background-size: 4px 4px;
+  }
+        </style>
+    </head>
+    <body>
+            <div class = "row"> 
+                    <div class ="col-sm-12 myrow">
+                        <img src = "capture.jpg">
+                    </div>
+                </div>
+        <div class = "stripped">
+        
+        <div class = "container">
+            
+            <div class = "row"> 
+            <div class ="col-sm-6">
+                <div class ="loginn">
+                        <h3><u>OLD USERS</u></h3><br>
+                        <br>
+                    <div class = "writeup"><br>
+                        
+                        <input type="radio" name="Luser"class="LRuser" id = "SLuser"value="staff" checked><strong>Staff</strong>
+                        <input type="radio" name="Luser"class="LRuser" id = "CLuser"value="customer"><strong>Customer</strong><br><br>
+                        <p>Please log-in using your email as your username</p>
+                        <div class = "CLoginphp">
+                        <form action = "CLoginphp.php" method = "POST">
+                            <strong>Username:</strong><br>
+                            <input type="text" name="Username" id="Username" placeholder ="Username"><br><br>  
+                            <strong>Password:</strong><br>
+                            <input type="password" name="Password" id="Password" placeholder= "Password"><br><br><br>
+                            <input type="checkbox" name="rememberme" id="rememberme"value="rememberme">Remember Me<br><br>  
+                            <button type ="submit" id="Lsubmit"><strong>LOG-IN</strong></button><br>
+                        </form>
+                        </div>
+                        <div class = "ELoginphp">
+                        <form action = "ELoginphp.php" method = "POST">
+                            <strong>Username:</strong><br>
+                            <input type="text" name="Username" id="Username" placeholder ="Username"><br><br>  
+                            <strong>Password:</strong><br>
+                            <input type="password" name="Password" id="Password" placeholder= "Password"><br><br>
+                            <strong>Position:</strong><br>
+                            <select name ="Position">
+                                <option value = "Analyst 1">Analyst 1</option>
+                                <option value = "Account Officer">Account Officer</option>
+                                <option value = "Supervisor">Supervisor</option>
+                                <option value = "CEO">CEO</option>
+                                <option value = "Admin">Admin</option>
+                            </select><br><br>
+                            <input type="checkbox" name="rememberme" id="rememberme"value="rememberme">Remember Me<br>  
+                            <button type ="submit" id="Lsubmit"><strong>LOG-IN</strong></button><br>
+                        </form>
+                        </div>
+                    </div>
+                    <span id = "Fp1"><a href= "#"> Forgotten password</a></span>
+                </div>
+            </div>
+            <div class ="col-sm-6">
+                <div class =" registerr">
+                        <h3><u>NEW USERS</u></h3><br><br>
+                    <div class = "writeup">
+                        
+                        <input type="radio" name="Ruser" class="LRuser"id = "SRuser"value="staff" checked><strong>Staff</strong>
+                        <input type="radio" name="Ruser" class="LRuser"id = "CRuser"value="customer"><strong>Customer</strong><br><br>
+                        <div class = "CRegisterphp">
+                        <form action = "CRegisterphp.php" id = "mycsubmit" method = "POST" >
+                            <strong>Fullname:</strong><br>
+                            <input type="text" name="fullname" id="CFullname" placeholder ="Fullname"><br><br>
+                            <strong>Phonenumber:</strong><br>
+                            <input type="text" name="phonenumber" id="CPhonenumber" placeholder ="Phonenumber"><br><br>
+                            <strong>Email:</strong><br>
+                            <input type="text" name="EmailAddress" id="CEmailAddress" placeholder ="Email Address"><br><p id = "putin4"></p>    
+                            <strong>Password:</strong><br>
+                            <input type="password" name="Password" id="CPassword" placeholder= "Password" onchange="checkkpassword();"/><br><p id = "putin2"></p>
+                            <strong>Confirm Password:</strong><br>
+                            <input type="password" name="Password_recheck" id="CPassword_recheck" placeholder= "Password" onchange="checkkpassword();"/><br><br>
+                            <button type ="submit" id="Rsubmit"><strong>REGISTER</strong></button><br><br>
+                        </form>
+                        </div>
+
+                        <div class = "ERegisterphp">
+                        <form action = "ERegisterphp.php" id = "myesubmit" method = "POST" >
+                            <strong>Fullname:</strong><br>
+                            <input type="text" name="fullname" id="EFullname" placeholder ="Fullname"><br><br>
+                            <strong>Position:</strong><br>
+                            <select name ="position">
+                                <option value = "Analyst 1">Analyst 1</option>
+                                <option value = "Account Officer">Account Officer</option>
+                                <option value = "Supervisor">Supervisor</option>
+                                <option value = "CEO">CEO</option>
+                                <option value = "Admin">Admin</option>
+                            </select><br><br>
+                            <strong>Email:</strong><br>
+                            <input type="text" name="EmailAddress" id="EEmailAddress" placeholder ="Email Address"><br><p id = "putin3"></p>
+                                    
+                            <strong>Password:</strong>
+                            <br><p id = "putin1"></p>
+                            <input type="password" name="Password" id="EPassword" placeholder= "Password"/><br><br>
+                            <strong>Confirm Password:</strong><br>
+                            <input type="password" name="Password_recheck" id="EPassword_recheck" placeholder= "Password"/>
+                            <br>
+                            <button type ="submit" id="Rsubmit"><strong>REGISTER</strong></button><br><br>
+                        </form>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            </div> 
+        </div>
+        <script>
+             function checkkpassword(){
+                    var x = $("#CPassword").val();
+                     var y = $("#CPassword_recheck").val();
+                    if(x == y)
+                        {
+                        $("#putin2").text("passwords match");  
+                        }          
+                    else
+                        {
+                        $("#putin2").text("passwords do not match");
+                        }
+            } 
+            
+                $("#mycsubmit").submit(function myvalidate(){                  
+                    var cinput1 = $("#CFullname").val();
+                    var cinput2 = $("#CPhonenumber").val();
+                    var cinput3 = $("#CEmail").val();
+                    var mycarray = [cinput1, cinput2, cinput3];
+							for (i =0; i < 3; i++){
+                                if (mycarray[i] == 0)
+                                    {$("#putin4").text("Please fill in all empty fields");
+                                    return false;}
+							}   
+                });
+                   $("#myesubmit").submit(function myevalidate(){
+                    var einput4 = $("#EFullname").val();
+                    var einput1 = $("#EEmailAddress").val();
+                    var myearray = [einput4, einput1];
+							for (i =0; i < 2; i++){
+							if (myearray[i] == 0)
+								{$("#putin3").text("Please fill in all empty fields");
+                                return false;}
+                            }
+                    });
+                    $("#myesubmit").submit(function checkingpassword(){
+                    var xx= $("#EPassword").val();
+                     var yy = $("#EPassword_recheck").val();
+                    if(xx != yy)
+                        {
+                            
+                        $("#putin1").text("passwords do not match");
+                        return false;
+                        }
+                });
+        
+            
+            $(document).ready(function validat(){
+                $('.CLoginphp').hide();
+                $('.CRegisterphp').hide();
+               
+                $("#CPassword,#CPassword_recheck").keyup(checkkpassword);
+                $(".LRuser").on('click', function validate(){
+                        if($("#SLuser").is(":checked"))
+                        {
+                            $('.CLoginphp').hide();
+                            $('.ELoginphp').show();
+                        }
+                        else
+                        {
+                            $('.CLoginphp').show();
+                            $('.ELoginphp').hide();
+                        }
+                        
+                        if($("#SRuser").is(":checked"))
+                        {
+                            $('.CRegisterphp').hide();
+                            $('.ERegisterphp').show();
+                        }
+                        else
+                        {
+                            $('.CRegisterphp').show();
+                            $('.ERegisterphp').hide();
+                        }
+                });              
+            });
+        </script>
+      </div>  
+    </body>
+</html>
+
+

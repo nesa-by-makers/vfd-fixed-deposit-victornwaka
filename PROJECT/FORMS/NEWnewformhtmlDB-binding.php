@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>FIXED DEPOSIT FORM</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel = "stylesheet" href = "form.css">
+		<script src="jquery-3.2.1.min.js"></script>
+	
+	</head>
+	<?php  session_start(); if(!isset($_SESSION["fullname"])){
+			header("Location: ../access.html");
+		  }
+		  ?>
+	<body>
+
+		<div class="container head">
+			<div class = "platform">
+				<img src= "capture.jpg" >
+				<h3 id = "topic">FIXED DEPOSIT PLACEMENT FORM</h3>
+			</div>
+				
+			<div class = "body1">
+				<p id = "paragraph1"><small> Thank you for choosing to invest with VFD Bridge. We are pleased to have the opportunity to offer our services to you.<br>
+									Kindly provide all your details below (as applicable) to aid the processing of your placement:</small>
+				</p><br>
+
+
+				<form class="form-horizontal" action = "newformphpDB-binding.php" method ="POST">
+					<p class = "subs"><u>PERSONAL DETAILS</u></p>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="fullname">Fullname:</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="fullname" value="<?php ECHO $_SESSION["fullname"];?>" name="fullname" readonly>
+						</div>	
+						<div class="col-sm-2"><p id ="putin1"></p></div>	
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Phonenumber">Phonenumber:</label>
+						<div class="col-sm-8">          
+							<input type="text" class="form-control" id="phonenumber" value="<?php ECHO $_SESSION["phonenumber"];?>" name="phonenumber" readonly>
+						</div>
+						<div class="col-sm-2"><p id ="putin2"></p></div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="ResidentialAddress">Residential Address:</label>
+						<div class="col-sm-8">          
+							<textarea class="form-control" id="ResidentialAddressr"  name="ResidentialAddress" rows="3">Enter Residential Address
+							</textarea>
+						</div>
+						<div class="col-sm-2"><p id ="putin3"></p></div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="OfficeAddress">Office Address:</label>
+						<div class="col-sm-8">          
+							<textarea class="form-control" id="OfficeAddress"  name="OfficeAddress" rows="3">Enter Office Address
+							</textarea>
+						</div>
+						<div class="col-sm-2"><p id ="putin4"></p></div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Occupation">Occupation:</label>
+						<div class="col-sm-3">          
+							<input type="text" class="form-control" id="Occupation" placeholder="Enter Occupation" name="Occupation">
+						</div>
+						<label class="control-label col-sm-2" for="Account_number">Account Number:</label>
+							<div class="col-sm-3">          
+								<input type="text" class="form-control"value="<?php echo $_SESSION['account_number'];?>" id="Account_number" name="Account_number">
+							</div>
+					</div>	
+					<p class = "subs"><u>PLACEMENT INFORMATION</u></p>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="proposedduration">Proposed Duration:</label>
+						<div class="col-sm-8">          
+							<input type="text" class="form-control" id="proposedduration" placeholder="Enter proposed duration" name="proposedduration">
+						</div>
+						<div class="col-sm-2"><p id ="putin6"></p></div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Amount">Amount:</label>
+						<div class="col-sm-8">          
+							<input type="text" class="form-control" id="Amount" placeholder="Enter Amount" name="Amount">
+						</div>
+						<div class="col-sm-2"><p id ="putin7"></p></div>
+					</div>	
+					<p class = "subs"><u>PAYOUT DETAILS</u></p>	
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="AccountNumber">Account Number:</label>
+						<div class="col-sm-8">          
+							<input type="text" class="form-control" id="AccountNumber" placeholder="Enter Account Number" name="AccountNumber">
+						</div>
+						<div class="col-sm-2"><p id ="putin8"></p></div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Account Name">Account Name:</label>
+						<div class="col-sm-8">          
+							<input type="text" class="form-control" id="AccountName" placeholder="Enter Account Name" name="AccountName">
+						</div>
+						<div class="col-sm-2"><p id ="putin9"></p></div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Name Of Bank">Name Of Bank:</label>
+						<div class="col-sm-8">          
+							<input type="text" class="form-control" id="NameOfBank" placeholder="Name Of Bank" name="NameOfBank">
+						</div>
+						<div class="col-sm-2"><p id ="putin10"></p></div>
+					</div>	
+					<p class = "subs"><u>NEXT-OF-KIN DETAILS</u></p>	 
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Name Of Kin">Name:</label>
+						<div class="col-sm-8">          
+							<input type="text" class="form-control" id="NameOfKin" placeholder="NameOfKin" name="NameOfKin">
+						</div>
+						<div class="col-sm-2"><p id ="putin11"></p></div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Phone Number">Phone Number:</label>
+						<div class="col-sm-8">          
+							<input type="text" class="form-control" id="PhoneNumberkin" placeholder="PhoneNumber" name="PhoneNumberkin">
+						</div>
+						<div class="col-sm-2"><p id ="putin12"></p></div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Email Address">Email Address:</label>
+						<div class="col-sm-8">          
+							<input type="text" class="form-control" id="EmailAddress" placeholder="Email Address" name="EmailAddress">
+						</div>
+						<div class="col-sm-2"><p id ="putin13"></p></div>
+					</div>
+					
+					<div class="form-group">
+						<label class="control-label col-sm-5" for="Reference">Reference: <small>(Who referred the company to you)</small>:</label>
+							<select name='Reference' class="col-sm-5" >
+								<option>Select your reference</option>
+							<?php
+							$server = "localhost";
+							$username = "root";
+							$password = "Qwerty12.,";
+							$database = "vfd_fd_form";
+							$connection = new mysqli($server, $username, $password, $database);
+								$result = $connection->query("select fullname from employee_register where position = 'Account Officer';");
+								while ($row = $result->fetch_assoc()) {
+									$ACCOUNTOFFICERS = $row['fullname']; 
+									echo '<option value="'.$ACCOUNTOFFICERS.'">'.$ACCOUNTOFFICERS.'</option>';
+								}
+							?>         
+							</select>
+						
+						<div class="col-sm-2"><p id ="putin14"></p></div>
+					</div>  
+					<div class="form-group">
+							
+							<label class="control-label col-sm-2" for="Date">Date:</label>
+							<div class="col-sm-3">          
+								<input type="date" class="form-control" id="date" placeholder="Date" name="Date">
+							</div>
+					</div>  
+						<p id = "finalnote"><small>NOTE THAT EVERY INFORMATION SUBMITTED IS TREATED AS CONFIDENTIAL</small></p>
+						<button  class="btn btn-default " id ="subbut">submit</button>
+
+				</form>
+				
+			</div>
+		</div>
+	</body>
+</html>
